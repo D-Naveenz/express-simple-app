@@ -1,0 +1,25 @@
+{
+  "name": "express-simple-app",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "devStart": "nodemon server.js",
+    "sass-watch": "sass --watch public/stylesheets/index.sass public/stylesheets/index.css",
+    "sass-watch-all": "sass --watch public/stylesheets:public/stylesheets"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19",
+    "sass": "^1.54.8"
+  },
+  "type": "module"
+}

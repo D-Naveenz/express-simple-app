@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  header
+    // navbar
+    nav.navbar.bg-light
+      .container-fluid
+        a.navbar-brand(href='/')= title
+        .navbar-user.text-nowrap
+          .user-avatar
+            img(src=authenticated ? '/images/avatar.svg' : '/uploads/#{avatar}')
+          .username-box
+            if authenticated
+              .row
+                .col
+                  h4= name
+              .row.row-cols-2
+                .col
+                  a(href='/logout') Logout
+            else
+              .row
+                .col
+                  h4 Guest
+              .row.row-cols-2
+                .col
+                  a(href='/login') Login
+                .col
+                  a(href='/reg') Register
+
+  article.container
+    H1 Hi #{name}
